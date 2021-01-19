@@ -1,0 +1,18 @@
+table {
+	border: 1px solid black; 
+	border-collapse: collapse;
+	padding: 4px;
+	text-align: center;
+	background-color:rgb(238, 224, 186);
+	color:black;
+}
+tr {
+	border: 1px solid black; 
+	border-collapse: collapse;
+	padding: 4px;
+}
+td {
+	border: 1px solid black; 
+	border-collapse: collapse;
+	padding: 4px;
+}

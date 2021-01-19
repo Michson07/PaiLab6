@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="database.xsl"?>
+<!DOCTYPE database 
+[
+    <!ELEMENT database (books,readers,borrows)>
+    <!ELEMENT books (book+)>
+    <!ATTLIST book id CDATA #REQUIRED>
+    <!ELEMENT book (title,author)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT readers (reader+)>
+    <!ATTLIST reader id CDATA #REQUIRED>
+    <!ELEMENT reader (name,lastname,address)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT borrows (borrow+)>
+    <!ATTLIST borrow id CDATA #REQUIRED>
+    <!ELEMENT borrow (startdate,enddate)>
+    <!ATTLIST borrow reader IDREF #REQUIRED>
+    <!ATTLIST borrow book IDREF #REQUIRED>
+    <!ELEMENT startdate (#PCDATA)>
+    <!ELEMENT enddate (#PCDATA)>
+]>
+
+<database>
+    <books>
+        <book id="Book1">
+            <title>W pustyni i w puszczy</title>
+            <author>Henryk Sienkiewicz</author>
+        </book>
+        <book id="Book2">
+            <title>Inferno</title>
+            <author>Dan Brown</author>
+        </book>
+        <book id="Book3">
+            <title>Balladyna</title>
+            <author>Juliusz Słowacki</author>
+        </book>
+        <book id="Book4">
+            <title>Krzyżacy</title>
+            <author>Henryk Sienkiewicz</author>
+        </book>
+        <book id="Book5">
+            <title>Na zdrowie</title>
+            <author>Jan Kochanowski</author>
+        </book>
+        <book id="Book6">
+            <title>Zemsta</title>
+            <author>Aleksander Fredro</author>
+        </book>
+        <book id="Book7">
+            <title>Żona Młoda</title>
+            <author>Ignacy Krasicki</author>
+        </book>
+    </books>
+    <readers>
+        <reader id="Reader1">
+            <name>Jan</name>
+            <lastname>Nowak</lastname>
+            <address>Warszawa</address>
+        </reader>
+        <reader id="Reader2">
+            <name>Michał</name>
+            <lastname>Czajkowski</lastname>
+            <address>Kielce</address>
+        </reader>
+        <reader id="Reader3">
+            <name>Marcin</name>
+            <lastname>Chodorek</lastname>
+            <address>Nieskórzów Stary</address>
+        </reader>
+        <reader id="Reader4">
+            <name>Adam</name>
+            <lastname>Kowalski</lastname>
+            <address>Kraków</address>
+        </reader>
+        <reader id="Reader5">
+            <name>Adam</name>
+            <lastname>Małysz</lastname>
+            <address>Zakopane</address>
+        </reader>
+    </readers>
+    <borrows>
+        <borrow id="Borrow1" reader="Reader2" book="Book3">
+            <startdate>04/01/2021</startdate>
+            <enddate>04/02/2021</enddate>
+        </borrow>
+        <borrow id="Borrow2" reader="Reader1" book="Book2">
+            <startdate>10/01/2021</startdate>
+            <enddate>10/02/2021</enddate>
+        </borrow>
+        <borrow id="Borrow3" reader="Reader4" book="Book1">
+            <startdate>28/12/2020</startdate>
+            <enddate>28/01/2021</enddate>
+        </borrow>
+        <borrow id="Borrow4" reader="Reader3" book="Book5">
+            <startdate>17/12/2020</startdate>
+            <enddate>17/01/2021</enddate>
+        </borrow>
+        <borrow id="Borrow5" reader="Reader5" book="Book4">
+            <startdate>01/01/2021</startdate>
+            <enddate>01/02/2021</enddate>
+        </borrow>
+        <borrow id="Borrow6" reader="Reader1" book="Book7">
+            <startdate>01/01/2021</startdate>
+            <enddate>01/02/2021</enddate>
+        </borrow>
+        <borrow id="Borrow7" reader="Reader2" book="Book6">
+            <startdate>02/01/2021</startdate>
+            <enddate>02/02/2021</enddate>
+        </borrow>
+        <borrow id="Borrow8" reader="Reader5" book="Book3">
+            <startdate>03/01/2021</startdate>
+            <enddate>03/02/2021</enddate>
+        </borrow>
+        <borrow id="Borrow9" reader="Reader3" book="Book2">
+            <startdate>22/01/2021</startdate>
+            <enddate>22/02/2021</enddate>
+        </borrow>
+    </borrows>
+</database>

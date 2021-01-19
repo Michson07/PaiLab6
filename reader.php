@@ -27,9 +27,10 @@ echo '<html>
         echo '<table>
         <tr><td><b>name</b></td>
             <td><b>lastname</b></td>
-            <td><b>Miasto</b></td>
+            <td><b>Address</b></td>
+            <td><b>Books</b></td>
         </tr>';
-        
+
         $query = new DatabaseQuery();
         $readers = $query->getReaders();
         foreach($readers ->reader as $reader)
@@ -46,10 +47,14 @@ echo '<html>
 
             if ((strcasecmp($readerOption, $optionvalue)) == 0)
             {
+                $books = $query->getReaderBooks($reader["id"]);
+                $booksNames = array_map(function($book) { return $book->title; }, $books);
                 echo '<tr>';
                 echo "<td>".$reader->name."</td>";
                 echo "<td>".$reader->lastname."</td>";
                 echo "<td>".$reader->address."</td>";
+                echo "<td>".implode (", ", $booksNames)."</td>";
+
                 echo "</tr>";
             }
         }

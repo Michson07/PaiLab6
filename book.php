@@ -26,18 +26,19 @@ echo '<html>
                 <td><b>author</b></td>
                 <td></b>title</b></td>
             </tr>';
-            
+
         $query = new DatabaseQuery();
         $books = $query->getBooks();
         foreach($books ->book as $book)
         {
             $author = $book->author;
-            if (strstr($author,$_POST['author']))
-                {echo '<tr>';
+            if (strcasecmp($author,$_POST['author']) == 0)
+            {
+                echo '<tr>';
                 echo "<td>".$author."</td>";
                 echo "<td>".$book->title."</td>";
                 echo "</tr>";
-                }
+            }
         };
         echo '</table> </br></br>';
     }

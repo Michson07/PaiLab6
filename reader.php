@@ -11,8 +11,14 @@ echo '<html>
     if($_SERVER['REQUEST_METHOD'] == 'GET')
     {
         echo '<form method="post" action="reader.php">
-        <label for="town">Miasto: (np.: Tarnobrzeg)</label> </br>
-        <input type="text" id="town" name="town"><br></br>
+        Opcja
+        <select name="option" id="option">
+            <option value="name">Imie</option>
+            <option value="lastname">Nazwisko</option>
+            <option value="address">Adres</option>
+        </select>
+        <label for="optionvalue">Wartosc</label> </br>
+        <input type="text" id="optionvalue" name="optionvalue"><br></br>
         <input type="submit" value="Wyszukaj"> 
         </form>';
     }
@@ -23,19 +29,30 @@ echo '<html>
             <td><b>lastname</b></td>
             <td><b>Miasto</b></td>
         </tr>';
+        
         $query = new DatabaseQuery();
         $readers = $query->getReaders();
         foreach($readers ->reader as $reader)
         {
-            $miasto = $reader->address;
-            if (strstr($miasto, $_POST['town']))
-                {echo '<tr>';
+            $option = $_POST['option'];
+            $optionvalue = $_POST['optionvalue'];
+            $readerOption = $reader->name;
+            if($option === "lastname") {
+                $readerOption = $reader->lastname;
+            }
+            else if($option === "address") {
+                $readerOption = $reader->address;
+            }
+
+            if ((strcasecmp($readerOption, $optionvalue)) == 0)
+            {
+                echo '<tr>';
                 echo "<td>".$reader->name."</td>";
                 echo "<td>".$reader->lastname."</td>";
-                echo "<td>".$miasto."</td>";
+                echo "<td>".$reader->address."</td>";
                 echo "</tr>";
-                }
-        };
+            }
+        }
         echo '</table> </br></br>';
     }
 

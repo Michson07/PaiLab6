@@ -26,6 +26,7 @@ echo '<html>
                 <td><b>author</b></td>
                 <td></b>title</b></td>
             </tr>';
+            
         $query = new DatabaseQuery();
         $books = $query->getBooks();
         foreach($books ->book as $book)

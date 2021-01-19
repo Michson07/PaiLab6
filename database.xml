@@ -26,32 +26,28 @@
 <database>
     <books>
         <book id="Book1">
-            <title>W pustyni i w puszczy</title>
-            <author>Henryk Sienkiewicz</author>
+            <title>Book1</title>
+            <author>Author1</author>
         </book>
         <book id="Book2">
-            <title>Inferno</title>
-            <author>Dan Brown</author>
+            <title>Book2</title>
+            <author>Author1</author>
         </book>
         <book id="Book3">
-            <title>Balladyna</title>
-            <author>Juliusz Słowacki</author>
+            <title>Book3</title>
+            <author>Author1</author>
         </book>
         <book id="Book4">
-            <title>Krzyżacy</title>
-            <author>Henryk Sienkiewicz</author>
+            <title>Book4</title>
+            <author>Author2</author>
         </book>
         <book id="Book5">
-            <title>Na zdrowie</title>
-            <author>Jan Kochanowski</author>
+            <title>Book5</title>
+            <author>Author3</author>
         </book>
         <book id="Book6">
-            <title>Zemsta</title>
-            <author>Aleksander Fredro</author>
-        </book>
-        <book id="Book7">
-            <title>Żona Młoda</title>
-            <author>Ignacy Krasicki</author>
+            <title>Book6</title>
+            <author>Author3</author>
         </book>
     </books>
     <readers>
@@ -102,7 +98,7 @@
             <startdate>01/01/2021</startdate>
             <enddate>01/02/2021</enddate>
         </borrow>
-        <borrow id="Borrow6" reader="Reader1" book="Book7">
+        <borrow id="Borrow6" reader="Reader1" book="Book1">
             <startdate>01/01/2021</startdate>
             <enddate>01/02/2021</enddate>
         </borrow>

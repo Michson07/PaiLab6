@@ -5,7 +5,7 @@
 	<xsl:output method="xml" indent="yes"
 		doctype-public="-//W3C//DTD XHTML 1.1//EN"
 		doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"/>
-    
+
 	<xsl:template match="/">
 		<html>
 			<head>
@@ -14,13 +14,13 @@
 			</head>
 			<body>
 				<xsl:apply-templates/>
-				<h4><a href="index.html">Powrót</a></h4>
 			</body>
 		</html>
 	</xsl:template>
 	<xsl:template match="readers">
+	<div class="tables-container">
 		<h4>Lista readerów:</h4>
-		<table>
+		<table class="data-table">
 			<tr>
 				<td><b>ID</b></td>
 				<td><b>name</b></td>
@@ -36,10 +36,12 @@
 				</tr>
 			</xsl:for-each>
 		</table>
+	</div>
 	</xsl:template>
     <xsl:template match="books">
+	<div class="tables-container">
 		<h4>Lista książek:</h4>
-		<table>
+		<table class="data-table">
 			<tr>
 				<td><b>ID</b></td>
 				<td><b>title</b></td>
@@ -53,10 +55,12 @@
 				</tr>
 			</xsl:for-each>
 		</table>
+	</div>
 	</xsl:template>
     <xsl:template match="borrows">
+	<div class="tables-container">
 		<h4>Lista wypożyczeń:</h4>
-		<table>
+		<table class="data-table">
 			<tr>
 				<td><b>ID</b></td>
 				<td><b>name</b></td>
@@ -85,5 +89,7 @@
 				</tr>
 			</xsl:for-each>
 		</table>
+		<h4><a href="index.html" class="return">Powrót</a></h4>
+	</div>
 	</xsl:template>
 </xsl:stylesheet>

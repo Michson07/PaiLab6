@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="database.xsl"?>
-<!DOCTYPE database 
+<!DOCTYPE database
 [
     <!ELEMENT database (books,readers,borrows)>
     <!ELEMENT books (book+)>
@@ -26,28 +26,28 @@
 <database>
     <books>
         <book id="Book1">
-            <title>Book1</title>
-            <author>Author1</author>
+            <title>Papierowy Mag</title>
+            <author>Holmberg</author>
         </book>
         <book id="Book2">
-            <title>Book2</title>
-            <author>Author1</author>
+            <title>Szklany Mag</title>
+            <author>Holmberg</author>
         </book>
         <book id="Book3">
-            <title>Book3</title>
-            <author>Author1</author>
+            <title>Mitologia Nordycka</title>
+            <author>Gaiman</author>
         </book>
         <book id="Book4">
-            <title>Book4</title>
-            <author>Author2</author>
+            <title>Amerykanscy Bogowie</title>
+            <author>Gaiman</author>
         </book>
         <book id="Book5">
-            <title>Book5</title>
-            <author>Author3</author>
+            <title>Eragon</title>
+            <author>Paolini</author>
         </book>
         <book id="Book6">
-            <title>Book6</title>
-            <author>Author3</author>
+            <title>Silmarilion</title>
+            <author>Tolkien</author>
         </book>
     </books>
     <readers>
@@ -64,7 +64,7 @@
         <reader id="Reader3">
             <name>Marcin</name>
             <lastname>Chodorek</lastname>
-            <address>Nieskórzów Stary</address>
+            <address>Nieskurzów Stary</address>
         </reader>
         <reader id="Reader4">
             <name>Adam</name>

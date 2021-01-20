@@ -7,15 +7,14 @@ echo '<html>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
-    <div id="header"> <b>books</b> </div>
     <div id="content">
-        <h2> Wykaz książek danego authora </h2>';
+        <h2> Wykaz książek danego Autora </h2>';
     if($_SERVER['REQUEST_METHOD']=='GET')
     {
-        echo '<form method="post" action="book.php">
-        <label for="author">author: (np.: Sienkiewicz)</label></br>
-        <input type="text" id="author" name="author"><br></br>
-        <input type="submit" value="Wyszukaj"> 
+        echo '<form method="post" action="book.php" class="form-container">
+        <label for="author">Autor ksiazki:</label><br>
+        <input type="text" id="author" name="author"><br>
+        <input type="submit" value="Wyszukaj" class="btn">
         </form>';
     }
     else
@@ -43,8 +42,7 @@ echo '<html>
         echo '</table> </br></br>';
     }
 
-echo '<a href="book.php">Odśwież</a> ';
+echo '<a href="book.php" class="return">Odśwież</a> ';
+echo '<a href="index.html" class="return">Stona główna</a>';
 echo '</div> </body> </html>';
 ?>
-<a href="index.html">Stona główna</a>
-    

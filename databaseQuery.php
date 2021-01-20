@@ -1,4 +1,4 @@
-<?php 
+<?php
     class DatabaseQuery {
         private function getAllResults() {
             return simplexml_load_file("database.xml");
@@ -33,7 +33,7 @@
                     }
                 }
             }
-            
+
             return $result;
         }
 

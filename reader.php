@@ -7,24 +7,26 @@ echo '<html>
     </head>
     <body>
     <div id="content">
-        <h2> Wykaz readerów z danego miasta </h2>';
+        <h2> Wykaz Czytelników z danego miasta </h2>';
     if($_SERVER['REQUEST_METHOD'] == 'GET')
     {
-        echo '<form method="post" action="reader.php">
-        Opcja
-        <select name="option" id="option">
-            <option value="name">Imie</option>
-            <option value="lastname">Nazwisko</option>
-            <option value="address">Adres</option>
-        </select>
-        <label for="optionvalue">Wartosc</label> </br>
-        <input type="text" id="optionvalue" name="optionvalue"><br></br>
-        <input type="submit" value="Wyszukaj"> 
-        </form>';
+        echo '
+        <form method="post" action="reader.php" class="form-container">
+            <label for="optionvalue">Wartosc</label>
+            <select name="option" id="option">
+                <option value="name">Imie</option>
+                <option value="lastname">Nazwisko</option>
+                <option value="address">Adres</option>
+            </select><br>
+            <label for="optionvalue">Wartosc</label>
+            <input type="text" id="optionvalue" name="optionvalue"><br>
+            <input type="submit" value="Wyszukaj" class="btn">
+        </form>
+        ';
     }
     else
     {
-        echo '<table>
+        echo '<table class="data-table">
         <tr><td><b>name</b></td>
             <td><b>lastname</b></td>
             <td><b>Address</b></td>
@@ -61,7 +63,7 @@ echo '<html>
         echo '</table> </br></br>';
     }
 
-echo '<a href="reader.php">Odśwież</a> ';
+echo '<a href="reader.php" class="return">Odśwież</a> ';
+echo '<a href="index.html" class="return">Stona główna</a>';
 echo '</div> </body> </html>';
 ?>
-<a href="index.html">Stona główna</a>

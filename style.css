@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
 table {
-	border: 1px solid black; 
+	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 4px;
 	text-align: center;
@@ -7,12 +14,133 @@ table {
 	color:black;
 }
 tr {
-	border: 1px solid black; 
+	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 4px;
 }
 td {
-	border: 1px solid black; 
+	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 4px;
+}
+
+
+.container-element {
+	margin-top: 5vh;
+	text-decoration: none;
+	color:  #1c1c1c;
+	font-size: 1.5em;
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+}
+
+ul{
+	padding-inline-start: 0;
+}
+
+.list-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.list-element {
+	list-style: none;
+	transition: 0.2s ease-in-out;
+}
+
+.list-element:hover {
+	background-color: #ababab;
+	transition: all 0.2s ease-in-out;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.console-container {
+	font-size:3em;
+	text-align:center;
+	height:200px;
+	width:600px;
+	display:block;
+	position:absolute;
+	color: #1c1c1c;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+.console-underscore {
+	display:inline-block;
+	position:relative;
+	top:0;
+	left:10px;
+ }
+
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#option {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	width: 10vw;
+	height: 5vh;
+	font-size: 1em;
+	cursor: pointer;
+	background:#9ACC5F;
+	color:#333;
+	border: none;
+	border-radius: 5px;
+	transition:all 0.8s, color 0.3s 0.3s;
+}
+
+.btn:hover{
+	transition:all 0.8s, color 0.3s 0.3s;
+	color: white;
+	box-shadow: 300px 0 0 0  rgba(0,0,0,0.25) inset, -300px 0 0 0  rgba(0,0,0,0.25) inset;
+}
+
+.data-table {
+	background-color: #ababab;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tables-container {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.return {
+	text-decoration: none;
+	color: #1c1c1c;
+	font-size: 1.2em;
+	transition: all 0.2s ease-in-out;
+}
+
+.return:hover {
+	color: #00a9d4;
+	transition: all 0.2s ease-in-out;
+}
+
+tr:hover {
+	background-color: white;
 }
